@@ -11,7 +11,7 @@
     <version>1.0-SNAPSHOT</version>
     <packaging>jar</packaging>
     <name>bcdbmetaaccess</name>
-    <description>Provides logic for accessing JPA persistence unit meta data</description>
+    <description>Provides logic for accessing database meta data via Java Persistence API (JPA)</description>
             
     <dependencies>
         <dependency>
@@ -28,9 +28,9 @@
             <artifactId>javax.persistence</artifactId>
         </dependency>
         <dependency>
-            <groupId>${project.groupId}</groupId>
-            <artifactId>bcdocusyspu</artifactId>
-            <version>${project.version}</version>
+            <groupId>com.h2database</groupId>
+            <artifactId>h2</artifactId>
+            <version>1.4.200</version>
             <scope>test</scope>
         </dependency>
         <dependency>

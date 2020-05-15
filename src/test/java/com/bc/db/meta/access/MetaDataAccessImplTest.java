@@ -15,9 +15,7 @@
  */
 package com.bc.db.meta.access;
 
-import com.bc.docusys.pu.PersistenceUnit;
 import java.util.Arrays;
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
@@ -34,7 +32,7 @@ public class MetaDataAccessImplTest {
     
     private final String catalog = null;
     private final String schemaNamePattern = null;
-    private final String tableNamePattern = "appuser";
+    private final String tableNamePattern = "appointment";
 
     private final String columnNamePattern = null;
     
@@ -48,13 +46,7 @@ public class MetaDataAccessImplTest {
     
     @BeforeClass
     public static void setUpClass() {
-        final Map m = new HashMap();
-        m.put("javax.persistence.jdbc.url", "jdbc:mysql://localhost:3306/docusys_db1?zeroDateTimeBehavior=convertToNull");
-        m.put("javax.persistence.jdbc.user", "newuser");
-        m.put("javax.persistence.jdbc.driver", "com.mysql.jdbc.Driver");
-        m.put("javax.persistence.jdbc.password", "tulinot");
-        
-        emf = Persistence.createEntityManagerFactory(PersistenceUnit.NAME, m);
+        emf = Persistence.createEntityManagerFactory("bcdbmetaaccess_pu");
     }
     
     public MetaDataAccess getInstance() {
