@@ -15,6 +15,7 @@
  */
 package com.bc.db.meta.access;
 
+import com.bc.db.meta.access.domain.Appointment;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
@@ -32,7 +33,7 @@ public class MetaDataAccessImplTest {
     
     private final String catalog = null;
     private final String schemaNamePattern = null;
-    private final String tableNamePattern = "appointment";
+    private final String tableNamePattern = Appointment.class.getSimpleName().toLowerCase();
 
     private final String columnNamePattern = null;
     
